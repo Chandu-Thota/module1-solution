@@ -12,18 +12,18 @@
 
       if ($scope.items === "") {
         $scope.message = "Please enter data first.";
-        $scope.noticeType = "danger";
+        $scope.notice = "danger";
       }
       else {
         var $itemsArray = $scope.items.split(",");
         var $length = $itemsArray.length;
         if ( ($length <= 3) || ($length == 4 && $itemsArray[3].trim() === "") ) {
           $scope.message = "Enjoy!";
-          $scope.noticeType = "success";
+          $scope.notice = "success";
         }
         else {
           $scope.message = "Too much!";
-          $scope.noticeType = "warning";
+          $scope.notice = "warning";
         }
       }
     };
